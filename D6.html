@@ -125,6 +125,13 @@
 
       const changeUrls = function () {
         const link = document.querySelector('a');
+      /* se ci fossero stati piu links prima dell'ultimo:
+           const links = document.querySelectorAll('a')
+         e poi fare un for che si fermi al penultimo :
+           for (i = 0; i < links.length - 1; i++) {
+           links[i].setAttribute('href', 'https://www.google.com')
+           }
+      */
         link.setAttribute('href', 'https://www.google.com');
       };
 
@@ -222,6 +229,8 @@
                 </tr>
               `;
 
+              // sarebbe stato meglio inserire 5 righe di td (5 elementi)
+
         const tableParent = document.getElementById('tableArea');
 
         tableParent.appendChild(newTable);
@@ -255,11 +264,10 @@
              */
 
       const hideAllImages = function () {
-        const imgToHide = document.getElementsByTagName('img')
-       for (i = 0; i < imgToHide.length; i++) {
+        const imgToHide = document.getElementsByTagName('img');
+        for (i = 0; i < imgToHide.length; i++) {
           imgToHide[i].style.display = 'none';
         }
-      
       };
 
       //hideAllImages()    se la eseguo le nasconde
@@ -270,7 +278,7 @@
 
       const changeColorWithRandom = function () {
         const h2ToChange = document.getElementById('changeMyColor');
-        const randomColor = ('#' + Math.floor(Math.random() * 19999))
+        const randomColor = '#' + Math.floor(Math.random() * 19999);
         h2ToChange.style.color = randomColor;
       };
     </script>

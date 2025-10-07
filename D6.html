@@ -255,8 +255,14 @@
              */
 
       const hideAllImages = function () {
-        const 
+        const imgToHide = document.getElementsByTagName('img')
+       for (i = 0; i < imgToHide.length; i++) {
+          imgToHide[i].style.display = 'none';
+        }
+      
       };
+
+      //hideAllImages()    se la eseguo le nasconde
 
       /* EXTRA ESERCIZIO 15
                Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
